@@ -17,19 +17,17 @@ public class Purchase : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
         {
-            if(collision.gameObject.CompareTag("ShopItem"))
+            if(Input.GetKey(KeyCode.E))
             {
-                if(Input.GetKey(KeyCode.E))
+                if(timeStamp <= Time.time)
                 {
-                    if(timeStamp <= Time.time)
+                    if(GameManager.Score >= price)
                     {
-                        if(GameManager.Score >= price)
+                        timeStamp = Time.time + cooldown;
+                        GameManager.Score = GameManager.Score - price;
+                        if(!rebuy)
                         {
-                            GameManager.Score = GameManager.Score - price;
-                            if(!rebuy)
-                            {
-                                Destroy(this);
-                            }
+                            Destroy(this);
                         }
                     }
                 }
