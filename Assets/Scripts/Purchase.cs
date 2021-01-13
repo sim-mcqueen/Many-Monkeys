@@ -12,25 +12,27 @@ public class Purchase : MonoBehaviour
     public int price = 10;
     public bool rebuy;
     public float cooldown = 0.5f;
-    private float timeStamp;
-    
+    private float timePassed = 0f;
+   
+    // Update is called once per frame
+    void Update () 
+    {
+        timePassed += Time.deltaTime;
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
         {
-            if(Input.GetKey(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E))
             {
-                if(timeStamp <= Time.time)
+                if(timePassed >= cooldown)
                 {
                     if(GameManager.Score >= price)
                     {
-                        timeStamp = Time.time + cooldown;
                         GameManager.Score = GameManager.Score - price;
-                        if(!rebuy)
-                        {
-                            Destroy(this);
-                        }
+                        timePassed = 0f;
                     }
                 }
+                
             }
         }
 }
