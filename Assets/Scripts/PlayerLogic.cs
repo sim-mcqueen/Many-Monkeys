@@ -16,7 +16,10 @@ public class PlayerLogic : MonoBehaviour
     private GameObject currentCheckPoint;
     Renderer rend;
     Color c;
-    
+    public GameObject HeartOne;
+    public GameObject HeartTwo;
+    public GameObject HeartThree;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,20 +38,31 @@ public class PlayerLogic : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Damage " + GameManager.startingHealth);
             GameManager.startingHealth -= 1;
             Debug.Log("Damage " + GameManager.startingHealth);
             if(GameManager.startingHealth <= 0)
             {
-                
+                HeartOne.SetActive(false);
                 GameManager.startingHealth = 3;
                 transform.position = respawnPos;
+                HeartOne.SetActive(true);
+                HeartTwo.SetActive(true);
+                HeartThree.SetActive(true);
             }
-            else
+            else if(GameManager.startingHealth == 2)
             {
+                HeartThree.SetActive(false);
                 StartCoroutine("GetInvulnerable");
             }
-
+            else if (GameManager.startingHealth == 1)
+            {
+                HeartTwo.SetActive(false);
+                StartCoroutine("GetInvulnerable");
+            }
             
+
+
 
         }
 
@@ -126,7 +140,6 @@ public class PlayerLogic : MonoBehaviour
 
     IEnumerator GetInvulnerable()
     {
-        
         Physics2D.IgnoreLayerCollision(8, 9, true);
         c.a = 0.5f;
         rend.material.color = c;

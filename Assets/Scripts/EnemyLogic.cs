@@ -9,15 +9,30 @@ using UnityEngine;
 
 public class EnemyLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float dirX, moveSpeed = 3f;
+    bool moveRight = true;
+    public float rightMostPos;
+    public float leftMostPos;
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (transform.position.x > rightMostPos)
+        {
+            moveRight = false;
+        }
+        if (transform.position.x < leftMostPos)
+        {
+            moveRight = true;
+        }
+
+        if (moveRight)
+        {
+            transform.position = new Vector2(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y);
+        }
+        else
+        {
+            transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
+        }
     }
 }
