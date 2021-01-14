@@ -13,9 +13,6 @@ public class GameManager : MonoBehaviour
 {
     private static int score = 50;
 
-    // A var used to store the score when the scene is loaded for later use
-    // public static int scoreStorage;
-
     public static UnityEvent OnScoreUpdate = new UnityEvent();
 
     public static int startingHealth = 3;
@@ -31,10 +28,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //public static void LevelReload
-    //{
-
-    //}
+    
 
 
 }
