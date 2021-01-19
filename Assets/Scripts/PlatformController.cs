@@ -52,13 +52,20 @@ public class PlatformController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isGrounded = true;
-        myAnim.SetBool("Grounded", true);
+        if(!(collision.gameObject.CompareTag("Banana")))
+        {
+            isGrounded = true;
+            myAnim.SetBool("Grounded", true);
+        }
+        
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        isGrounded = true;
-        myAnim.SetBool("Grounded", true);
+        if (!(collision.gameObject.CompareTag("Banana")))
+        {
+            isGrounded = true;
+            myAnim.SetBool("Grounded", true);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
