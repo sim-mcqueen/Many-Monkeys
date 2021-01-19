@@ -96,6 +96,28 @@ public class PlayerLogic : MonoBehaviour
                 currentCheckPoint.GetComponent<SpriteRenderer>().color = checkActive;
             }
         }
+        if(collision.gameObject.CompareTag("Heart"))
+        {
+            if(GameManager.startingHealth < 3)
+            {
+                GameManager.startingHealth += 1;
+                if(GameManager.startingHealth == 2)
+                {
+                    HeartTwo.SetActive(true);
+                }
+                else if(GameManager.startingHealth == 3)
+                {
+                    HeartThree.SetActive(true);
+                }
+
+
+
+            }
+
+        }
+
+
+
     }
 
 
