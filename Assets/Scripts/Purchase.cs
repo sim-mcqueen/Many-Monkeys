@@ -11,28 +11,71 @@ public class Purchase : MonoBehaviour
 {
     public int price = 10;
     public bool rebuy;
-    public float cooldown = 0.5f;
-    private float timePassed = 0f;
-   
-    // Update is called once per frame
-    void Update () 
+    public bool cooldown;
+    public Upgrades upgrade = new Upgrades();
+    [Tooltip("Amount to CHANGE the above upgrade by")]
+    public float amount;
+
+    void Start()
     {
-        timePassed += Time.deltaTime;
+        GameManager.OnPurchase.AddListener(UpgradePlayer);
+    }
+
+    private void UpgradePlayer()
+    {
+        Debug.Log("In upgrade");
+        
+        if(upgrade.ToString() == "Speed")
+        {
+            GameManager.Speed += amount;
+        }   
+        else if(upgrade.ToString() == "JumpHeight")
+        {
+            GameManager.JumpHeight += amount;
+        }
+        else if (upgrade.ToString() == "JumpAmount")
+        {
+            GameManager.JumpAmount += (int) amount;
+        }
+        else
+        {
+            Debug.Log("None Selected");
+        }
+    }
+
+    void ResetCooldown()
+    {
+        cooldown = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKey(KeyCode.E))
             {
-                if(timePassed >= cooldown)
+                if(cooldown == false)
                 {
                     if(GameManager.Score >= price)
                     {
+
                         GameManager.Score = GameManager.Score - price;
-                        timePassed = 0f;
+                        GameManager.OnPurchase.Invoke();
+
+
+                        Invoke("ResetCooldown", 0.25f);
+                        cooldown = true;
+                        if(!rebuy)
+                        {
+                            Destroy(this);
+                        }
                     }
                 }
                 
             }
         }
 }
+public enum Upgrades
+    {
+        Speed,
+        JumpHeight,
+        JumpAmount
+    };

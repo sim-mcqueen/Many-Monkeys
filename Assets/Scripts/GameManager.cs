@@ -11,11 +11,19 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private static int score = 50;
+    private static int score = 0;
+
+    private static float speed = 5f;
+    
+    private static float jumpheight = 4f;
+
+    private static int jumpamount = 2;
+    
+    public static int startingHealth = 3;
 
     public static UnityEvent OnScoreUpdate = new UnityEvent();
 
-    public static int startingHealth = 3;
+    public static UnityEvent OnPurchase = new UnityEvent();
 
     public static int Score
     {
@@ -25,6 +33,33 @@ public class GameManager : MonoBehaviour
             score = value;
 
             OnScoreUpdate.Invoke();
+        }
+    }
+
+    public static float Speed
+    {
+        get => speed;
+        set
+        {
+            speed = value;
+        }
+    }
+
+    public static float JumpHeight
+    {
+        get => jumpheight;
+        set
+        {
+            jumpheight = value;
+        }
+    }
+
+    public static int JumpAmount
+    {
+        get => jumpamount;
+        set
+        {
+            jumpamount = value;
         }
     }
 

@@ -9,8 +9,7 @@ using UnityEngine;
 
 public class PlatformController : MonoBehaviour
 {
-    public float speed;
-    public float jumpforce;
+    public float dashforce = 4;
     private float moveInput;
     private bool facingRight = true;
 
@@ -22,7 +21,6 @@ public class PlatformController : MonoBehaviour
     //public Transform groundCheck;
     //public float checkRadius;
     private int jumps;
-    public int maxJumps = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -36,16 +34,16 @@ public class PlatformController : MonoBehaviour
     {
         if(isGrounded)
         {
-            jumps = maxJumps;
+            jumps = GameManager.JumpAmount;
         }
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            myRB.velocity = Vector2.up * jumpforce;
+            myRB.velocity = Vector2.up * GameManager.JumpHeight;
         }
         else if(Input.GetKeyDown(KeyCode.Space) && jumps > 1)
         {
-            myRB.velocity = Vector2.up * jumpforce;
+            myRB.velocity = Vector2.up * GameManager.JumpHeight;
             --jumps;
         }
     }
@@ -80,8 +78,16 @@ public class PlatformController : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
         //set player velocity based on input
-        myRB.velocity = new Vector2(moveInput * speed, myRB.velocity.y);
-        
+        myRB.velocity = new Vector2(moveInput * GameManager.Speed, myRB.velocity.y);
+
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(facingRight)
+            {
+                myRB.AddForce(transform.right * dashforce);
+            }
+            
+        }
         if(moveInput == 0)
         {
             myAnim.SetBool("isWalking", false);
