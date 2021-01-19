@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - ShopItem
   - Banana
+  - Heart
   layers:
   - Default
   - TransparentFX
