@@ -20,12 +20,16 @@ public class EnemyLogic : MonoBehaviour
         if (transform.position.x > rightMostPos)
         {
             moveRight = false;
-            Flip();
+            Vector3 Scaler = transform.localScale;
+            Scaler.x = -4;
+            transform.localScale = Scaler;
         }
         if (transform.position.x < leftMostPos)
         {
             moveRight = true;
-            Flip();
+            Vector3 Scaler = transform.localScale;
+            Scaler.x = 4;
+            transform.localScale = Scaler;
         }
 
         if (moveRight)
@@ -41,13 +45,13 @@ public class EnemyLogic : MonoBehaviour
 
 
     //flips the enemy and all children attached
-    private void Flip()
-    {
+    //private void Flip()
+    //{
         
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
-    }
+        //Vector3 Scaler = transform.localScale;
+        //Scaler.x *= -1;
+        //transform.localScale = Scaler;
+    //}
 
 
 }
