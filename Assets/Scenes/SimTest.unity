@@ -1900,7 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74fe59234f20b404c840034eefe82ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: eddie test
+  NextLevel: EdLevel2
 --- !u!61 &317128613
 BoxCollider2D:
   m_ObjectHideFlags: 0
