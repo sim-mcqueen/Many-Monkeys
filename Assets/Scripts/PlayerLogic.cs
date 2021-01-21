@@ -27,6 +27,19 @@ public class PlayerLogic : MonoBehaviour
         respawnPos = transform.position;
         rend = GetComponent<Renderer>();
         c = rend.material.color;
+        if(GameManager.startingHealth == 1)
+        {
+            HeartThree.SetActive(false);
+            HeartTwo.SetActive(false);
+
+        }
+        else if (GameManager.startingHealth == 2)
+        {
+            HeartThree.SetActive(false);
+
+        }
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

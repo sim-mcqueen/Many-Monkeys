@@ -1,4 +1,4 @@
-﻿/////////////////////////////
+/////////////////////////////
 //// Name: Sim McQueen
 //// Date: 1/7/21
 //// Desc: The game manager allows you to store varaibles when there should be only one instance of it
@@ -11,19 +11,21 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private static int score = 0;
+    private static int score = 100;
 
     private static float speed = 5f;
     
-    private static float jumpheight = 5f;
+    private static float jumpheight = 4f;
 
     private static int jumpamount = 2;
     
     public static int startingHealth = 3;
+    
 
     public static UnityEvent OnScoreUpdate = new UnityEvent();
 
     public static UnityEvent OnPurchase = new UnityEvent();
+
 
     public static int Score
     {
