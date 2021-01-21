@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     private static float speed = 5f;
     
-    private static float jumpheight = 4f;
+    private static float jumpheight = 5f;
 
     private static int jumpamount = 2;
     
