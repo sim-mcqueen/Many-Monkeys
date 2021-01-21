@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 66a99f6007ca67c4393b6c34d0c14129
+  - enabled: 1
+    path: Assets/Scenes/JeanriTest.unity
+    guid: a50042a2185bd004da118e46f5ca9a99
+  - enabled: 1
+    path: Assets/Scenes/TylerTest.unity
+    guid: 842aef06ee600d448993871d7b91eae8
   m_configObjects: {}
