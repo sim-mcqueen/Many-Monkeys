@@ -147,9 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e19223bdc22f14fb3b42db693b44a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpforce: 4
-  maxJumps: 2
+  dashforce: 4
 --- !u!70 &8263091336557577294
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -164,7 +162,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.52}
-  m_Size: {x: 0.64, y: 0.1}
+  m_Size: {x: 0.5, y: 0.1}
   m_Direction: 1
 --- !u!114 &8263091336557577295
 MonoBehaviour:
@@ -180,6 +178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkActive: {r: 1, g: 0, b: 1, a: 1}
   checkInactive: {r: 1, g: 1, b: 1, a: 1}
+  HeartOne: {fileID: 0}
+  HeartTwo: {fileID: 0}
+  HeartThree: {fileID: 0}
 --- !u!95 &4334594928252665120
 Animator:
   serializedVersion: 3
@@ -211,3 +212,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0798757147748479d6f383601e9304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 3
