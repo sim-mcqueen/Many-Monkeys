@@ -143,6 +143,21 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.41568628
+      objectReference: {fileID: 0}
     - target: {fileID: 6083355185773099131, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -717,6 +732,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: banana (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7003021536162775777, guid: 7911a05b9afa7c943aac1b884e6f9dc2,
+        type: 3}
+      propertyPath: points
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7911a05b9afa7c943aac1b884e6f9dc2, type: 3}
 --- !u!1001 &470433134
@@ -999,12 +1019,27 @@ PrefabInstance:
     - target: {fileID: 584261987612143950, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
         type: 3}
       propertyPath: waypoints.Array.data[1].y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 584261987612143950, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
         type: 3}
       propertyPath: speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.41568628
       objectReference: {fileID: 0}
     - target: {fileID: 6083355185773099131, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
         type: 3}
@@ -1014,7 +1049,7 @@ PrefabInstance:
     - target: {fileID: 6083355185773099131, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 6083355185773099131, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
         type: 3}
@@ -1143,17 +1178,17 @@ PrefabInstance:
     - target: {fileID: 8263091336557577295, guid: eadb052033916a04f91d3837f5842c1f,
         type: 3}
       propertyPath: checkActive.r
-      value: 0.45098042
+      value: 0.8209131
       objectReference: {fileID: 0}
     - target: {fileID: 8263091336557577295, guid: eadb052033916a04f91d3837f5842c1f,
         type: 3}
       propertyPath: checkActive.g
-      value: 0.54901963
+      value: 0.5506853
       objectReference: {fileID: 0}
     - target: {fileID: 8263091336557577295, guid: eadb052033916a04f91d3837f5842c1f,
         type: 3}
       propertyPath: checkActive.b
-      value: 0.16862746
+      value: 0.9339623
       objectReference: {fileID: 0}
     - target: {fileID: 8263091336557577295, guid: eadb052033916a04f91d3837f5842c1f,
         type: 3}
@@ -1244,6 +1279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: banana
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003021536162775777, guid: 7911a05b9afa7c943aac1b884e6f9dc2,
+        type: 3}
+      propertyPath: points
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7911a05b9afa7c943aac1b884e6f9dc2, type: 3}
@@ -13512,6 +13552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: banana (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7003021536162775777, guid: 7911a05b9afa7c943aac1b884e6f9dc2,
+        type: 3}
+      propertyPath: points
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7911a05b9afa7c943aac1b884e6f9dc2, type: 3}
 --- !u!1001 &1138329357
@@ -13701,7 +13746,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -13778,6 +13823,21 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083355185773099130, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4156863
       objectReference: {fileID: 0}
     - target: {fileID: 6083355185773099131, guid: 79bd756fe7f6e5f44bfa9e03046866e3,
         type: 3}

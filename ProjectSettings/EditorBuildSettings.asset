@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EdLevel2.unity
     guid: d4b34ab8ec3149a4e8ebcfea59747ef0
   - enabled: 1
+    path: Assets/Scenes/JeanriTest.unity
+    guid: a50042a2185bd004da118e46f5ca9a99
+  - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 66a99f6007ca67c4393b6c34d0c14129
   m_configObjects: {}
