@@ -9,24 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 05bb6d47fb455b14eab625e2f7e6d1a8
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/SimTest.unity
-    guid: 623567cd71b88fe4f827b19336a9cc5e
-  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 15730edd6350185439c222534106b9f5
   - enabled: 1
     path: Assets/Scenes/EdLevel2.unity
     guid: d4b34ab8ec3149a4e8ebcfea59747ef0
   - enabled: 1
+    path: Assets/Scenes/SimLevel.unity
+    guid: 9fa772ea93d63a540a61e55a42de0e4e
+  - enabled: 1
     path: Assets/Scenes/JeanriTest.unity
     guid: a50042a2185bd004da118e46f5ca9a99
   - enabled: 1
-    path: Assets/Scenes/EndScreen.unity
-    guid: 66a99f6007ca67c4393b6c34d0c14129
-  - enabled: 1
     path: Assets/Scenes/MelanieTest.unity
     guid: 17d43399e47d21b4a84502142c27b236
+  - enabled: 1
+    path: Assets/Scenes/TylerTest.unity
+    guid: 842aef06ee600d448993871d7b91eae8
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 66a99f6007ca67c4393b6c34d0c14129
   m_configObjects: {}

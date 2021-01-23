@@ -19,6 +19,7 @@ public class PlayerLogic : MonoBehaviour
     public GameObject HeartOne;
     public GameObject HeartTwo;
     public GameObject HeartThree;
+    private bool flag = true;
 
 
     // Start is called before the first frame update
@@ -140,8 +141,34 @@ public class PlayerLogic : MonoBehaviour
         {
             LevelDoor LD = collision.GetComponent<LevelDoor>();
             if(LD != null)
-            {
-                SceneManager.LoadScene(LD.NextLevel);
+            {  
+                
+
+                if((LD.NextLevel == "Shop") && flag)
+                {
+                    Debug.Log("Pre-Increase scene count: " + GameManager.SceneCount);
+                    GameManager.SceneCount += 1;
+                    Debug.Log("Post-Increase scene count: " + GameManager.SceneCount);
+                    SceneManager.LoadScene("Shop");
+                    Debug.Log("Current scene: " + SceneManager.GetActiveScene().buildIndex);
+                    flag = false;
+
+
+                }
+
+                else if((LD.NextLevel == "ExitShop") && flag)
+                {
+                    Debug.Log("Current scene: " + SceneManager.GetActiveScene().buildIndex);
+                    Debug.Log("Scene count: " + GameManager.SceneCount);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + GameManager.SceneCount);
+                    flag = false;
+                    
+                }
+                else if((LD.NextLevel == "EndScreen") && flag)
+                {
+                    SceneManager.LoadScene("EndScreen");
+                }
+                
             }
         }
     }

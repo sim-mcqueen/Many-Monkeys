@@ -8799,6 +8799,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3664184205814387560, guid: 0af8df7a238a5724a9c69eb3cf85dc8c,
+        type: 3}
+      propertyPath: NextLevel
+      value: EndScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 3664184205814387561, guid: 0af8df7a238a5724a9c69eb3cf85dc8c,
         type: 3}
       propertyPath: m_LocalPosition.x

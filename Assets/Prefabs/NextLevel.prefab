@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74fe59234f20b404c840034eefe82ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: EndScreen
+  NextLevel: Shop
 --- !u!1 &3664184206953438585
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,19 +13,28 @@ public class GameManager : MonoBehaviour
 {
     private static int score = 100;
 
-    private static float speed = 5f;
+    private static float speed = 10f;
     
-    private static float jumpheight = 5f;
+    private static float jumpheight = 10f;
 
     private static int jumpamount = 2;
     
     public static int startingHealth = 3;
     
+    private static int sceneCount = 1;
 
     public static UnityEvent OnScoreUpdate = new UnityEvent();
 
     public static UnityEvent OnPurchase = new UnityEvent();
 
+    public static int SceneCount
+    {
+        get => sceneCount;
+        set
+        {
+            sceneCount = value;
+        }
+    }
 
     public static int Score
     {
