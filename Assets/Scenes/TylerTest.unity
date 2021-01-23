@@ -5051,6 +5051,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9868c170ba0286f4fae7fa9b8d13df4e, type: 3}
+--- !u!1 &899230444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3144714223799438202, guid: 9868c170ba0286f4fae7fa9b8d13df4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 899230443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &899230445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3144714224359629222, guid: 9868c170ba0286f4fae7fa9b8d13df4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 899230443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &899230446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3144714222793851930, guid: 9868c170ba0286f4fae7fa9b8d13df4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 899230443}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &917171977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6995,6 +7013,21 @@ PrefabInstance:
       propertyPath: checkActive.b
       value: 0.16862746
       objectReference: {fileID: 0}
+    - target: {fileID: 8263091336557577295, guid: eadb052033916a04f91d3837f5842c1f,
+        type: 3}
+      propertyPath: HeartOne
+      value: 
+      objectReference: {fileID: 899230446}
+    - target: {fileID: 8263091336557577295, guid: eadb052033916a04f91d3837f5842c1f,
+        type: 3}
+      propertyPath: HeartTwo
+      value: 
+      objectReference: {fileID: 899230445}
+    - target: {fileID: 8263091336557577295, guid: eadb052033916a04f91d3837f5842c1f,
+        type: 3}
+      propertyPath: HeartThree
+      value: 
+      objectReference: {fileID: 899230444}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eadb052033916a04f91d3837f5842c1f, type: 3}
 --- !u!1001 &1342831458
