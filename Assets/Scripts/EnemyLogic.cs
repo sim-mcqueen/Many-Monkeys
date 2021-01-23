@@ -13,18 +13,28 @@ public class EnemyLogic : MonoBehaviour
     bool moveRight = true;
     public float rightMostPos;
     public float leftMostPos;
+    private float rightMost;
+    private float leftMost;
+
+
+    void Start()
+    {
+        rightMost = transform.position.x + rightMostPos;
+        leftMost = transform.position.x - leftMostPos;
+    }
+
 
 
     void Update()
     {
-        if (transform.position.x > rightMostPos)
+        if (transform.position.x > rightMost)
         {
             moveRight = false;
             Vector3 Scaler = transform.localScale;
             Scaler.x = -4;
             transform.localScale = Scaler;
         }
-        if (transform.position.x < leftMostPos)
+        if (transform.position.x < leftMost)
         {
             moveRight = true;
             Vector3 Scaler = transform.localScale;
