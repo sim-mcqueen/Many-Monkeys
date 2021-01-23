@@ -45,8 +45,7 @@ public class Purchase : MonoBehaviour
     }
     private void UpgradePlayer()
     {
-        Debug.Log("In upgrade");
-        
+       
         if(upgrade.ToString() == "Speed")
         {
             GameManager.Speed += amount;
@@ -93,11 +92,16 @@ public class Purchase : MonoBehaviour
                 {
                     if(GameManager.Score >= price)
                     {
-                        StartCoroutine(SufficientFunds());
-                        GameManager.Score = GameManager.Score - price;
-                        GameManager.OnPurchase.Invoke();
-
-
+                        if((upgrade.ToString() == "Health") && GameManager.startingHealth == 3)
+                        {
+                            StartCoroutine(InsufficientFunds());
+                        }
+                        else
+                        {
+                            StartCoroutine(SufficientFunds());
+                            GameManager.Score = GameManager.Score - price;
+                            GameManager.OnPurchase.Invoke();
+                        }
                         Invoke("ResetCooldown", 0.25f);
                         cooldown = true;
                         if(!rebuy)
