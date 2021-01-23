@@ -11,11 +11,11 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private static int score = 100;
+    private static int score = 0;
 
-    private static float speed = 10f;
+    private static float speed = 5f;
     
-    private static float jumpheight = 10f;
+    private static float jumpheight = 5f;
 
     private static int jumpamount = 2;
     
